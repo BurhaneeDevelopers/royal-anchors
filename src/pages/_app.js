@@ -1,6 +1,9 @@
 import "@/styles/globals.css";
 import { useEffect } from "react";
 import AOS from "aos";
+import Navbar from "../../Components/navbar";
+import BackToTop from "../../Components/backToTop";
+import Action from "../../Components/action";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -15,5 +18,12 @@ export default function App({ Component, pageProps }) {
     });
     AOS.refresh();
   }, []);
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Navbar />
+      <BackToTop />
+      <Action />
+      <Component {...pageProps} />
+    </>
+  );
 }

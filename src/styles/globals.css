@@ -2,23 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-.top-nav {
-  font-family: "Montserrat", sans-serif;
+::selection {
+  background-color: #4e4e4e;
+  color: #fff;
 }
-.bottom-nav {
-  font-family: "Montserrat", sans-serif;
+
+.scrollTop.active {
+  bottom: 40px;
+  visibility: visible;
+  opacity: 1;
 }
-.hero-text {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-}
-.content {
-  font-family: "Roboto", sans-serif;
-}
-.headings {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-}
+
 .text-shadow {
   -webkit-text-stroke: 1px white;
   color: transparent;
@@ -56,27 +50,84 @@
     transform: translateY(0%);
   }
 }
-.fade-up{
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out; 
-}
-.fade-up.animated {
-  opacity: 1;
-}
-/* .fade-up span {
-  position: relative;
+
+.text-rise-animation span {
   display: inline-block;
-  text-transform: uppercase;
-  animation: waviy 1s ;
-  animation-delay: calc(0.1s * var(--i));
-} */
+  transform: translate(0, 10rem);
+  opacity: 0;
+  animation: rise 1s forwards;
+  animation-delay: var(--i);
+}
 
+@keyframes rise {
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
 
-@keyframes waviy {
-  0%,40%,100% {
-    transform: translateY(0)
+.nav-el {
+  position: relative;
+}
+
+.nav-el::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #54595f;
+  transition: height 0.3s ease;
+  z-index: -1;
+}
+
+.nav-el:hover::before {
+  height: 100%;
+}
+.typewriter {
+  white-space: pre;
+  overflow: hidden;
+  border-right: 3px solid white;
+  animation: typewriter 1.5s steps(40) infinite alternate,
+    blink 800ms steps(40) infinite;
+  animation-delay: 2s !important;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0%;
   }
-  20% {
-    transform: translateY(-20px)
+  to {
+    width: 33%;
   }
+}
+@keyframes blink {
+  from {
+    border-color: white;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+
+.top-nav {
+  font-family: "Montserrat", sans-serif;
+}
+.bottom-nav {
+  font-family: "Montserrat", sans-serif;
+}
+.hero-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+.content {
+  font-family: "Roboto", sans-serif;
+}
+.headings {
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-txt{
+  font-family: "Roboto", sans-serif;
 }
