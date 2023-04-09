@@ -1,9 +1,9 @@
 import "@/styles/globals.css";
 import { useEffect } from "react";
 import AOS from "aos";
-import Navbar from "../../Components/navbar";
-import BackToTop from "../../Components/backToTop";
-import Action from "../../Components/action";
+import Navbar from "../../components/navbar";
+import BackToTop from "../../components/backToTop";
+import Action from "../../components/action";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {

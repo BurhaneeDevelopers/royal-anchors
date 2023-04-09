@@ -18,7 +18,7 @@ import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
 import { useEffect } from "react";
-import AnimateOnScroll from "../../Components/animateOnScroll";
+import AnimateOnScroll from "../../components/animateOnScroll";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
