@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./src/**/*.{html,js}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./node_modules/tw-elements/dist/js/**/*.js",
   ],
@@ -18,8 +19,8 @@ module.exports = {
       "3xl": "1836px",
     },
   },
-  plugins: [require("daisyui"), require("tw-elements/dist/plugin")],
   daisyui: {
     themes: false,
   },
+  plugins: [require("daisyui"), require("tw-elements/dist/plugin")],
 };
