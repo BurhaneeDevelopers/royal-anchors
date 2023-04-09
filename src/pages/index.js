@@ -36,7 +36,7 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
 
-      <section>
+      <section className="w-full">
         <div
           id="carouselDarkVariant"
           className="relative"
@@ -55,9 +55,9 @@ export default function Home() {
               <div className="absolute text-[18px] text-white z-30 right-10 bottom-5">
                 1&nbsp;/ <span className="text-[14px] content"> 2</span>
               </div>
-              <div className="w-screen h-screen">
+              <div className="w-full h-screen">
                 <div
-                  className="block h-screen w-screen bg-[url('/banners/banner-img-1.jpg')] bg-no-repeat bg-cover carousel-image"
+                  className="block h-screen w-full bg-[url('/banners/banner-img-1.jpg')] bg-no-repeat bg-cover carousel-image"
                   alt=""
                 ></div>
                 <div className="bg-black/40 z-10 absolute inset-0 slide-down"></div>
@@ -210,38 +210,38 @@ export default function Home() {
       </section>
       {/* About  */}
       <section className="bg-[url('/about-bg-img.jpg')] bg-right bg-cover bg-no-repeat">
-        <div className="flex justify-around items-center flex-wrap bg-white/90">
+        <div className="flex justify-around items-center flex-wrap bg-white/90 py-5 md:p-0">
           <div className="w-1/2">
-            <h2 className="text-[#7f4497] text-[32px] headings my-3 font-semibold">
+            <h2 className="text-[#7f4497] text-xl xxs:text-[32px] headings my-3 font-semibold text-center md:text-start">
               About Us
             </h2>
-            <p className="max-w-xl content text-sm my-5">
+            <p className="max-w-xl content text-sm my-5 text-center md:text-start">
               Royal Anchors From its humble beginning in 2012, Has grown to
               become one of the leading Anchor bolt and nonstandard construction
               fastener manufacturers in South India.
             </p>
-            <button className="bg-[#e3be23] hover:bg-transparent hover:text-[#ce9e51] transition-all duration-300 p-2.5 px-10 text-white content flex items-center gap-3">
+            <button className="bg-[#e3be23] hover:bg-transparent hover:text-[#ce9e51] transition-all duration-300 p-2 text-sm xxs:text-md xxs:p-2.5 xxs:px-10 text-white content flex items-center gap-3 mx-auto md:mx-0">
               More About Us{" "}
               <span>
                 <BsFillArrowRightCircleFill />
               </span>
             </button>
           </div>
-          <div className="py-3 xl:-translate-x-20">
+          <div className="py-3 xl:-translate-x-20 hidden md:flex">
             <Image
               width={500}
               height={500}
               src="/about-img.png"
-              className="w-[350px] h-[380px]"
+              className="md:w-[300px] md:h-[320px] lg:w-[350px] lg:h-[380px]"
             />
           </div>
         </div>
       </section>
       {/* About  */}
-      <section className="bg-gray-100 p-20">
-        <div className="flex justify-around items-center">
+      <section className="bg-gray-100 p-10 xs:p-20">
+        <div className="flex flex-col lg:flex-row justify-around items-center space-y-5 lg:space-y-0">
           <AnimateOnScroll>
-            <h3 className="text-[#7f4497] text-[35px] font-semibold headings">
+            <h3 className="text-[#7f4497] text-xl xs:text-2xl 2xs:text-[35px]  font-semibold headings">
               <span style={{ "--i": ".04s" }}>O</span>
               <span style={{ "--i": ".08s" }}>u</span>
               <span style={{ "--i": ".12s" }} className="mr-3">
@@ -257,8 +257,8 @@ export default function Home() {
               <span style={{ "--i": ".44s" }}>s</span>
             </h3>
           </AnimateOnScroll>
-          <div className="max-w-lg">
-            <p className="content text-[#666666] text-lg">
+          <div className="max-w-sm xl:max-w-lg">
+            <p className="content text-[#666666] xl:text-lg lg:text-[1rem] text-center lg:text-">
               Royal Anchors provides anchor bolts and construction fasteners
               direct to end-users including contractors, fabricators, erectors,
               government agencies, original equipment manufacturers, and other
@@ -266,7 +266,7 @@ export default function Home() {
             </p>
           </div>
           <div className="">
-            <button className="bg-[#e3be23] hover:bg-transparent hover:text-[#e3be23] transition-all duration-300 p-4 px-10 rounded-full text-white content flex items-center gap-3 hover:font-bold">
+            <button className="bg-[#e3be23] hover:bg-transparent hover:text-[#e3be23] transition-all duration-300 p-3 xl:p-4 px-8 xl:px-10 rounded-full text-white content flex items-center gap-3 hover:font-bold">
               View All Products
             </button>
           </div>
@@ -274,42 +274,42 @@ export default function Home() {
 
         {/* Products */}
         <div className="flex flex-col pt-20">
-          <div className="flex justify-around pt-10">
+          <div className="flex flex-wrap flex-col space-y-20 sm:space-y-0 sm:flex-row justify-around pt-10">
             <span className="flex flex-col items-center justify-center text-center">
-              <img src="/products/prod-1.png" alt="Products" />
-              <h3 className="headings text-[#7f4497] text-[28px] mt-5">
+              <img src="/products/prod-1.png" alt="Products" className="h-56 md:h-auto"/>
+              <h3 className="headings text-[#7f4497] text-2xl sm:text-lg md:text-[28px] mt-5">
                 T Shape
               </h3>
             </span>
             <span className="flex flex-col items-center justify-center text-center">
-              <img src="/products/prod-2.png" alt="Products" />
-              <h3 className="headings text-[#7f4497] text-[28px] mt-5">
+              <img src="/products/prod-2.png" alt="Products" className="h-56 md:h-auto"/>
+              <h3 className="headings text-[#7f4497] text-2xl sm:text-lg md:text-[28px] mt-5">
                 J Shape
               </h3>
             </span>
             <span className="flex flex-col items-center justify-center text-center">
-              <img src="/products/prod-3.png" alt="Products" />
-              <h3 className="headings text-[#7f4497] text-[28px] mt-5">
+              <img src="/products/prod-3.png" alt="Products" className="h-56 md:h-auto"/>
+              <h3 className="headings text-[#7f4497] text-2xl sm:text-lg md:text-[28px] mt-5">
                 L Shape
               </h3>
             </span>
           </div>
-          <div className="flex justify-around pt-24">
+          <div className="flex flex-wrap flex-col space-y-20 sm:space-y-0 sm:flex-row justify-around pt-24">
             <span className="flex flex-col items-center justify-center text-center">
-              <img src="/products/prod-4.png" alt="Products" />
-              <h3 className="headings text-[#7f4497] text-[28px] mt-5">
+              <img src="/products/prod-4.png" alt="Products" className="h-56 md:h-auto"/>
+              <h3 className="headings text-[#7f4497] text-2xl sm:text-lg md:text-[28px] mt-5">
                 Plate Shape
               </h3>
             </span>
             <span className="flex flex-col items-center justify-center text-center">
-              <img src="/products/prod-5.png" alt="Products" />
-              <h3 className="headings text-[#7f4497] text-[28px] mt-5">
+              <img src="/products/prod-5.png" alt="Products" className="h-56 md:h-auto"/>
+              <h3 className="headings text-[#7f4497] text-2xl sm:text-lg md:text-[28px] mt-5">
                 Brace Rod
               </h3>
             </span>
             <span className="flex flex-col items-center justify-center text-center">
-              <img src="/products/prod-6.png" alt="Products" />
-              <h3 className="headings text-[#7f4497] text-[28px] mt-5">
+              <img src="/products/prod-6.png" alt="Products" className="h-56 md:h-auto"/>
+              <h3 className="headings text-[#7f4497] text-2xl sm:text-lg md:text-[28px] mt-5">
                 V Shape Rod
               </h3>
             </span>
@@ -318,11 +318,11 @@ export default function Home() {
         {/* Products */}
       </section>
       {/* Industries  */}
-      <section className="bg-[#182431] p-20">
-        <div className="flex justify-around items-center">
+      <section className="bg-[#182431] p-10 xs:p-20">
+        <div className="flex flex-col sm:flex-row justify-around items-center space-y-5 sm:space-y-0">
           <div className="lg:-ml-10">
             <AnimateOnScroll>
-              <h3 className="text-white text-[42px] font-semibold headings">
+              <h3 className="text-white text-xl sm:text-[42px] font-semibold headings">
                 {/* INDUSTRIES WE SERVE */}
                 <span style={{ "--i": ".04s" }}>I</span>
                 <span style={{ "--i": ".08s" }}>N</span>
@@ -349,7 +349,7 @@ export default function Home() {
             </AnimateOnScroll>
           </div>
           <div className="">
-            <button className="bg-[#e3be23] hover:bg-transparent hover:text-[#e3be23] transition-all duration-300 p-4 px-10 rounded-full text-white content flex items-center gap-3 hover:font-bold">
+            <button className="bg-[#e3be23] hover:bg-transparent hover:text-[#e3be23] transition-all duration-300 p-2 px-6 xs:p-4 xs:px-10 rounded-full text-white content flex items-center gap-3 hover:font-bold">
               View All Products
             </button>
           </div>
@@ -362,10 +362,10 @@ export default function Home() {
               <img
                 src="/Industries/img-1.png"
                 alt="Products"
-                className="h-[25rem] w-[23rem]"
+                className="h-[15rem] w-[18rem] 2xs:h-[25rem] 2xs:w-[23rem]"
               />
-              <span className="w-64 h-48 bg-white relative bottom-[10%]">
-                <h3 className="font-bold text-black text-[22px] pt-5 headings">
+              <span className="w-48 h-32 2xs:w-64 2xs:h-48 bg-white relative bottom-[10%]">
+                <h3 className="font-bold text-black text-lg 2xs:text-[22px] pt-5 headings">
                   Pre Engineered Buildings System
                 </h3>{" "}
                 <span className="flex justify-center relative top-[20%] text-[#ce9e51]">
@@ -377,10 +377,10 @@ export default function Home() {
               <img
                 src="/Industries/img-2.png"
                 alt="Products"
-                className="h-[25rem] w-[23rem]"
+                className="h-[15rem] w-[18rem] 2xs:h-[25rem] 2xs:w-[23rem]"
               />
-              <span className="w-64 h-48 bg-white relative bottom-[10%]">
-                <h3 className="font-bold text-black text-[22px] pt-5 headings">
+              <span className="w-48 h-32 2xs:w-64 2xs:h-48 bg-white relative bottom-[10%]">
+                <h3 className="font-bold text-black text-lg 2xs:text-[22px] pt-5 headings">
                   Precast Concrete Structures
                 </h3>{" "}
                 <span className="flex justify-center relative top-[20%] text-[#ce9e51]">
@@ -392,10 +392,10 @@ export default function Home() {
               <img
                 src="/Industries/img-3.png"
                 alt="Products"
-                className="h-[25rem] w-[23rem]"
+                className="h-[15rem] w-[18rem] 2xs:h-[25rem] 2xs:w-[23rem]"
               />
-              <span className="w-64 h-48 bg-white relative bottom-[10%]">
-                <h3 className="font-bold text-black text-[22px] pt-5 headings px-2">
+              <span className="w-48 h-32 2xs:w-64 2xs:h-48 bg-white relative bottom-[10%]">
+                <h3 className="font-bold text-black text-lg 2xs:text-[22px] pt-5 headings px-2">
                   Street & Domestic Lamp Post Foundation Bolts
                 </h3>{" "}
                 <span className="flex justify-center relative top-[20%] text-[#ce9e51]">
@@ -409,10 +409,10 @@ export default function Home() {
               <img
                 src="/Industries/img-4.png"
                 alt="Products"
-                className="h-[25rem] w-[23rem]"
+                className="h-[15rem] w-[18rem] 2xs:h-[25rem] 2xs:w-[23rem]"
               />
-              <span className="w-64 h-48 bg-white relative bottom-[10%]">
-                <h3 className="font-bold text-black text-[22px] pt-5 headings">
+              <span className="w-48 h-32 2xs:w-64 2xs:h-48 bg-white relative bottom-[10%]">
+                <h3 className="font-bold text-black text-lg 2xs:text-[22px] pt-5 headings">
                   Beam Crash Barrier Foundation Bolts
                 </h3>{" "}
                 <span className="flex justify-center relative top-[20%] text-[#ce9e51]">
@@ -424,10 +424,10 @@ export default function Home() {
               <img
                 src="/Industries/img-5.png"
                 alt="Products"
-                className="h-[25rem] w-[23rem]"
+                className="h-[15rem] w-[18rem] 2xs:h-[25rem] 2xs:w-[23rem]"
               />
-              <span className="w-64 h-48 bg-white relative bottom-[10%]">
-                <h3 className="font-bold text-black text-[22px] pt-5 headings">
+              <span className="w-48 h-32 2xs:w-64 2xs:h-48 bg-white relative bottom-[10%]">
+                <h3 className="font-bold text-black text-lg 2xs:text-[22px] pt-5 headings">
                   Industrial Heavy Duty Fan
                 </h3>{" "}
                 <span className="flex justify-center relative top-[20%] text-[#ce9e51]">
@@ -439,10 +439,10 @@ export default function Home() {
               <img
                 src="/Industries/img-6.png"
                 alt="Products"
-                className="h-[25rem] w-[23rem]"
+                className="h-[15rem] w-[18rem] 2xs:h-[25rem] 2xs:w-[23rem]"
               />
-              <span className="w-64 h-48 bg-white relative bottom-[10%]">
-                <h3 className="font-bold text-black text-[22px] pt-5 headings px-2">
+              <span className="w-48 h-32 2xs:w-64 2xs:h-48 bg-white relative bottom-[10%]">
+                <h3 className="font-bold text-black text-lg 2xs:text-[22px] pt-5 headings px-2">
                   Heavy Metal Fabrication
                 </h3>{" "}
                 <span className="flex justify-center relative top-[20%] text-[#ce9e51]">
