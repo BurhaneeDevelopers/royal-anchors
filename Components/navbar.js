@@ -28,7 +28,7 @@ const Navbar = () => {
                   <li>
                     <a
                       className="text-gray-100 transition flex items-center gap-2 top-nav text-[0.8rem] hover:text-[#ECC834]"
-                      href="/"
+                      href="#"
                     >
                       <span>
                         <FaPhone className="text-[1rem] font-thin" />
@@ -40,7 +40,7 @@ const Navbar = () => {
                   <li>
                     <a
                       className="text-gray-100 transition flex items-center gap-2 top-nav text-[0.8rem] hover:text-[#ECC834]"
-                      href="/"
+                      href="#"
                     >
                       <span>
                         <MdEmail className="text-[1rem] font-thin" />
@@ -52,7 +52,7 @@ const Navbar = () => {
                   <li>
                     <a
                       className="text-gray-100 transition flex items-center gap-2 top-nav text-[0.8rem] hover:text-[#ECC834]"
-                      href="/"
+                      href="#"
                     >
                       <span>
                         <MdLocationOn className="text-[1rem] font-thin" />
@@ -65,25 +65,25 @@ const Navbar = () => {
 
                 <ul className="flex gap-1 ">
                   <li className="">
-                    <a className="text-gray-100 transition" href="/">
+                    <a className="text-gray-100 transition" href="#">
                       <FaFacebookF className="text-[2.1rem] p-2 hover:bg-[#ECC834] rounded-sm transition-all ease-in-out duration-300" />
                     </a>
                   </li>
 
                   <li className="">
-                    <a className="text-gray-100 transition" href="/">
+                    <a className="text-gray-100 transition" href="#">
                       <AiOutlineTwitter className="text-[2.1rem] p-2 hover:bg-[#ECC834] rounded-sm transition-all ease-in-out duration-300" />
                     </a>
                   </li>
 
                   <li className="">
-                    <a className="text-gray-100 transition" href="/">
+                    <a className="text-gray-100 transition" href="#">
                       <AiFillGithub className="text-[2.1rem] p-2 hover:bg-[#ECC834] rounded-sm transition-all ease-in-out duration-300" />
                     </a>
                   </li>
 
                   <li className="">
-                    <a className="text-gray-100 transition" href="/">
+                    <a className="text-gray-100 transition" href="#">
                       <FaBitbucket className="text-[2.1rem] p-2 hover:bg-[#ECC834] rounded-sm transition-all ease-in-out duration-300" />
                     </a>
                   </li>
@@ -98,7 +98,7 @@ const Navbar = () => {
                 <li className="">
                   <a
                     className="text-[#ECC834] bg-[#54595F] p-[1.39rem] px-8 bottom-nav capitalize text-[0.59rem] font-bold tracking-wide"
-                    href="/"
+                    href="#"
                   >
                     HOME
                   </a>
@@ -107,7 +107,7 @@ const Navbar = () => {
                 <li className="">
                   <a
                     className="text-white hover:text-[#ECC834] nav-el p-[1.39rem] px-8 bottom-nav capitalize text-[0.59rem] transition-all ease-in-out duration-500 font-bold tracking-wide "
-                    href="/"
+                    href="#"
                   >
                     ABOUT US
                   </a>
@@ -116,7 +116,7 @@ const Navbar = () => {
                 <li className="">
                   <a
                     className="text-white hover:text-[#ECC834] nav-el p-[1.39rem] px-8 bottom-nav capitalize text-[0.59rem] transition-all ease-in-out duration-500 font-bold tracking-wide"
-                    href="/"
+                    href="#"
                   >
                     SERVICES
                   </a>
@@ -125,7 +125,7 @@ const Navbar = () => {
                 <li className="">
                   <a
                     className="text-white hover:text-[#ECC834] nav-el p-[1.39rem] px-8 bottom-nav capitalize text-[0.59rem] transition-all ease-in-out duration-500 font-bold tracking-wide"
-                    href="/"
+                    href="#"
                   >
                     OUR PRODUCTS
                   </a>
@@ -134,7 +134,7 @@ const Navbar = () => {
                 <li className="">
                   <a
                     className="text-white hover:text-[#ECC834] nav-el p-[1.39rem] px-8 bottom-nav capitalize text-[0.59rem] transition-all ease-in-out duration-500 font-bold tracking-wide"
-                    href="/"
+                    href="#"
                   >
                     TECHNICAL SPECIFICATION
                   </a>
@@ -143,7 +143,7 @@ const Navbar = () => {
                 <li className="">
                   <a
                     className="text-white hover:text-[#ECC834] nav-el p-[1.39rem] px-8 bottom-nav capitalize text-[0.59rem] transition-all ease-in-out duration-500 font-bold tracking-wide"
-                    href="/"
+                    href="#"
                   >
                     INDUSTRIES WE SERVE
                   </a>
@@ -152,7 +152,7 @@ const Navbar = () => {
                 <li className="">
                   <a
                     className="text-white hover:text-[#ECC834] nav-el p-[1.39rem] px-8 bottom-nav capitalize text-[0.59rem] transition-all ease-in-out duration-500 font-bold tracking-wide"
-                    href="/"
+                    href="#"
                   >
                     MANUFACTURING CAPABILITIES
                   </a>

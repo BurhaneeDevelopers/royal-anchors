@@ -3,7 +3,6 @@ module.exports = {
   content: [
     "./components/**/*.{js,ts,jsx,tsx}",
     "./src/pages/**/*.{html,js,jsx,tsx}",
-    // "./pages/**/*.{js,ts,jsx,tsx}",
     "./node_modules/tw-elements/dist/js/**/*.js",
   ],
   theme: {
