@@ -31,7 +31,7 @@ export default function Home() {
     <>
       <Head>
         <title>Home - Royal Anchors</title>
-        <meta name="description" content="Royal Anchor Clone"/>
+        <meta name="description" content="Royal Anchor Clone" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.png" />
       </Head>
@@ -55,63 +55,65 @@ export default function Home() {
               <div className="absolute text-[18px] text-white z-30 right-10 bottom-5">
                 1&nbsp;/ <span className="text-[14px] content"> 2</span>
               </div>
-              <div className="w-full h-screen">
+              <div className="w-full h-full flex justify-center items-center flex-col overflow-hidden">
                 <div
                   className="block h-screen w-full bg-[url('/banners/banner-img-1.jpg')] bg-no-repeat bg-cover carousel-image"
                   alt=""
                 ></div>
-                <div className="bg-black/40 z-10 absolute inset-0 slide-down"></div>
-              </div>
-              <div className="absolute left-[29.5%] top-[25.5%] 3xl:left-[40%] py-4 text-center text-black md:block z-10">
-                <h5 className="text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-rise-animation">
-                  <span style={{ "--i": ".01s" }}>W</span>
-                  <span style={{ "--i": ".02s" }} className="mr-5">
-                    e
-                  </span>
-                  <span style={{ "--i": ".3s" }}>M</span>
-                  <span style={{ "--i": ".4s" }}>a</span>
-                  <span style={{ "--i": ".5s" }}>n</span>
-                  <span style={{ "--i": ".6s" }}>u</span>
-                  <span style={{ "--i": ".7s" }}>f</span>
-                  <span style={{ "--i": ".8s" }}>a</span>
-                  <span style={{ "--i": ".9s" }}>c</span>
-                  <span style={{ "--i": "1s" }}>t</span>
-                  <span style={{ "--i": "1.1s" }}>u</span>
-                  <span style={{ "--i": "1.2s" }}>r</span>
-                  <span style={{ "--i": "1.3s" }}>e</span>
-                </h5>
-                <h5 className="text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-shadow text-rise-animation">
-                  {/* Locally */}
-                  <span style={{ "--i": "1.4s" }}>L</span>
-                  <span style={{ "--i": "1.5s" }}>o</span>
-                  <span style={{ "--i": "1.6s" }}>c</span>
-                  <span style={{ "--i": "1.7s" }}>a</span>
-                  <span style={{ "--i": "1.8s" }}>l</span>
-                  <span style={{ "--i": "1.9s" }}>l</span>
-                  <span style={{ "--i": "2s" }}>y</span>
-                </h5>
-                <h5 className="text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-rise-animation">
-                  <span style={{ "--i": "2.1s" }}>S</span>
-                  <span style={{ "--i": "2.2s" }}>e</span>
-                  <span style={{ "--i": "2.3s" }}>l</span>
-                  <span style={{ "--i": "2.4s" }}>l</span>{" "}
-                  <span className="text-shadow">
-                    <span style={{ "--i": "2.5s" }}>G</span>
-                    <span style={{ "--i": "2.6s" }}>l</span>
-                    <span style={{ "--i": "2.7s" }}>o</span>
-                    <span style={{ "--i": "2.8s" }}>b</span>
-                    <span style={{ "--i": "2.9s" }}>a</span>
-                    <span style={{ "--i": "3s" }}>l</span>
-                    <span style={{ "--i": "3.1s" }}>l</span>
-                    <span style={{ "--i": "3.2s" }}>y</span>
-                  </span>
-                </h5>
+                {/* <div className="bg-black/40 absolute inset-0 slide-down"></div> */}
+                <div className="absolute py-4 text-center text-black md:flex flex-col justify-center items-center bg-black/40 inset-0 slide-down">
+                  <span className="relative top-[37vh] 2xs:top-[25vh] md:top-0">
+                    <h5 className="text-[30px] xxs:text-[35px] sm:text-[45px] lg:text-[50px] xl:text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-rise-animation lg:mt-20 xl:mt-0">
+                      <span style={{ "--i": ".01s" }}>W</span>
+                      <span style={{ "--i": ".02s" }} className="mr-5">
+                        e
+                      </span>
+                      <span style={{ "--i": ".3s" }}>M</span>
+                      <span style={{ "--i": ".4s" }}>a</span>
+                      <span style={{ "--i": ".5s" }}>n</span>
+                      <span style={{ "--i": ".6s" }}>u</span>
+                      <span style={{ "--i": ".7s" }}>f</span>
+                      <span style={{ "--i": ".8s" }}>a</span>
+                      <span style={{ "--i": ".9s" }}>c</span>
+                      <span style={{ "--i": "1s" }}>t</span>
+                      <span style={{ "--i": "1.1s" }}>u</span>
+                      <span style={{ "--i": "1.2s" }}>r</span>
+                      <span style={{ "--i": "1.3s" }}>e</span>
+                    </h5>
+                    <h5 className="text-[30px] xxs:text-[35px] sm:text-[45px] lg:text-[50px] xl:text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-shadow text-rise-animation">
+                      {/* Locally */}
+                      <span style={{ "--i": "1.4s" }}>L</span>
+                      <span style={{ "--i": "1.5s" }}>o</span>
+                      <span style={{ "--i": "1.6s" }}>c</span>
+                      <span style={{ "--i": "1.7s" }}>a</span>
+                      <span style={{ "--i": "1.8s" }}>l</span>
+                      <span style={{ "--i": "1.9s" }}>l</span>
+                      <span style={{ "--i": "2s" }}>y</span>
+                    </h5>
+                    <h5 className="text-[30px] xxs:text-[35px] sm:text-[45px] lg:text-[50px] xl:text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-rise-animation">
+                      <span style={{ "--i": "2.1s" }}>S</span>
+                      <span style={{ "--i": "2.2s" }}>e</span>
+                      <span style={{ "--i": "2.3s" }}>l</span>
+                      <span style={{ "--i": "2.4s" }}>l</span>{" "}
+                      <span className="text-shadow">
+                        <span style={{ "--i": "2.5s" }}>G</span>
+                        <span style={{ "--i": "2.6s" }}>l</span>
+                        <span style={{ "--i": "2.7s" }}>o</span>
+                        <span style={{ "--i": "2.8s" }}>b</span>
+                        <span style={{ "--i": "2.9s" }}>a</span>
+                        <span style={{ "--i": "3s" }}>l</span>
+                        <span style={{ "--i": "3.1s" }}>l</span>
+                        <span style={{ "--i": "3.2s" }}>y</span>
+                      </span>
+                    </h5>
 
-                <div className="text-rise-animation">
-                  <span style={{ "--i": "3.4s" }}>
-                    <button className="px-[1.8rem] py-[0.6rem] border-2 border-[#e3be23] text-white mt-10 content tracking-widest text-sm font-thin hover:border-white">
-                      GET A QUOTE
-                    </button>
+                    <div className="text-rise-animation">
+                      <span style={{ "--i": "3.4s" }}>
+                        <button className="px-[1.8rem] py-[0.6rem] border-2 border-[#e3be23] text-white mt-10 content tracking-widest text-sm font-thin hover:border-white">
+                          GET A QUOTE
+                        </button>
+                      </span>
+                    </div>
                   </span>
                 </div>
               </div>
@@ -130,58 +132,60 @@ export default function Home() {
                   className="block h-screen w-screen bg-[url('/banners/banner-img-2.jpg')] bg-no-repeat bg-cover carousel-image"
                   alt=""
                 ></div>
-                <div className="bg-black/40 z-10 absolute inset-0 slide-down"></div>
-              </div>
-              <div className="absolute left-[29.5%] top-[25.5%] hidden py-4 text-center text-black md:block z-10 font-bold">
-                <h5 className="text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-rise-animation">
-                  <span style={{ "--i": ".1s" }}>W</span>
-                  <span style={{ "--i": ".2s" }} className="mr-5">
-                    e
-                  </span>
-                  <span style={{ "--i": ".3s" }}>M</span>
-                  <span style={{ "--i": ".4s" }}>a</span>
-                  <span style={{ "--i": ".5s" }}>n</span>
-                  <span style={{ "--i": ".6s" }}>u</span>
-                  <span style={{ "--i": ".7s" }}>f</span>
-                  <span style={{ "--i": ".8s" }}>a</span>
-                  <span style={{ "--i": ".9s" }}>c</span>
-                  <span style={{ "--i": "1s" }}>t</span>
-                  <span style={{ "--i": "1.1s" }}>u</span>
-                  <span style={{ "--i": "1.2s" }}>r</span>
-                  <span style={{ "--i": "1.3s" }}>e</span>
-                </h5>
-                <h5 className="text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-shadow text-rise-animation">
-                  {/* Locally */}
-                  <span style={{ "--i": "1.4s" }}>L</span>
-                  <span style={{ "--i": "1.5s" }}>o</span>
-                  <span style={{ "--i": "1.6s" }}>c</span>
-                  <span style={{ "--i": "1.7s" }}>a</span>
-                  <span style={{ "--i": "1.8s" }}>l</span>
-                  <span style={{ "--i": "1.9s" }}>l</span>
-                  <span style={{ "--i": "2s" }}>y</span>
-                </h5>
-                <h5 className="text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-rise-animation">
-                  <span style={{ "--i": "2.1s" }}>S</span>
-                  <span style={{ "--i": "2.2s" }}>e</span>
-                  <span style={{ "--i": "2.3s" }}>l</span>
-                  <span style={{ "--i": "2.4s" }}>l</span>{" "}
-                  <span className="text-shadow">
-                    <span style={{ "--i": "2.5s" }}>G</span>
-                    <span style={{ "--i": "2.6s" }}>l</span>
-                    <span style={{ "--i": "2.7s" }}>o</span>
-                    <span style={{ "--i": "2.8s" }}>b</span>
-                    <span style={{ "--i": "2.9s" }}>a</span>
-                    <span style={{ "--i": "3s" }}>l</span>
-                    <span style={{ "--i": "3.1s" }}>l</span>
-                    <span style={{ "--i": "3.2s" }}>y</span>
-                  </span>
-                </h5>
+                {/* <div className="bg-black/40 z-10 absolute inset-0 slide-down"></div> */}
+                <div className="absolute py-4 text-center text-black md:flex flex-col justify-center items-center bg-black/40 inset-0 slide-down">
+                  <span className="relative top-[37vh] 2xs:top-[25vh] md:top-0">
+                    <h5 className="text-[30px] xxs:text-[35px] sm:text-[45px] lg:text-[50px] xl:text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-rise-animation lg:mt-20 xl:mt-0">
+                      <span style={{ "--i": ".01s" }}>W</span>
+                      <span style={{ "--i": ".02s" }} className="mr-5">
+                        e
+                      </span>
+                      <span style={{ "--i": ".3s" }}>M</span>
+                      <span style={{ "--i": ".4s" }}>a</span>
+                      <span style={{ "--i": ".5s" }}>n</span>
+                      <span style={{ "--i": ".6s" }}>u</span>
+                      <span style={{ "--i": ".7s" }}>f</span>
+                      <span style={{ "--i": ".8s" }}>a</span>
+                      <span style={{ "--i": ".9s" }}>c</span>
+                      <span style={{ "--i": "1s" }}>t</span>
+                      <span style={{ "--i": "1.1s" }}>u</span>
+                      <span style={{ "--i": "1.2s" }}>r</span>
+                      <span style={{ "--i": "1.3s" }}>e</span>
+                    </h5>
+                    <h5 className="text-[30px] xxs:text-[35px] sm:text-[45px] lg:text-[50px] xl:text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-shadow text-rise-animation">
+                      {/* Locally */}
+                      <span style={{ "--i": "1.4s" }}>L</span>
+                      <span style={{ "--i": "1.5s" }}>o</span>
+                      <span style={{ "--i": "1.6s" }}>c</span>
+                      <span style={{ "--i": "1.7s" }}>a</span>
+                      <span style={{ "--i": "1.8s" }}>l</span>
+                      <span style={{ "--i": "1.9s" }}>l</span>
+                      <span style={{ "--i": "2s" }}>y</span>
+                    </h5>
+                    <h5 className="text-[30px] xxs:text-[35px] sm:text-[45px] lg:text-[50px] xl:text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-rise-animation">
+                      <span style={{ "--i": "2.1s" }}>S</span>
+                      <span style={{ "--i": "2.2s" }}>e</span>
+                      <span style={{ "--i": "2.3s" }}>l</span>
+                      <span style={{ "--i": "2.4s" }}>l</span>{" "}
+                      <span className="text-shadow">
+                        <span style={{ "--i": "2.5s" }}>G</span>
+                        <span style={{ "--i": "2.6s" }}>l</span>
+                        <span style={{ "--i": "2.7s" }}>o</span>
+                        <span style={{ "--i": "2.8s" }}>b</span>
+                        <span style={{ "--i": "2.9s" }}>a</span>
+                        <span style={{ "--i": "3s" }}>l</span>
+                        <span style={{ "--i": "3.1s" }}>l</span>
+                        <span style={{ "--i": "3.2s" }}>y</span>
+                      </span>
+                    </h5>
 
-                <div className="text-rise-animation">
-                  <span style={{ "--i": "3.4s" }}>
-                    <button className="px-[1.8rem] py-[0.6rem] border-2 border-[#e3be23] text-white mt-10 content tracking-widest text-sm font-thin hover:border-white">
-                      GET A QUOTE
-                    </button>
+                    <div className="text-rise-animation">
+                      <span style={{ "--i": "3.4s" }}>
+                        <button className="px-[1.8rem] py-[0.6rem] border-2 border-[#e3be23] text-white mt-10 content tracking-widest text-sm font-thin hover:border-white">
+                          GET A QUOTE
+                        </button>
+                      </span>
+                    </div>
                   </span>
                 </div>
               </div>
@@ -276,19 +280,31 @@ export default function Home() {
         <div className="flex flex-col pt-20">
           <div className="flex flex-wrap flex-col space-y-20 sm:space-y-0 sm:flex-row justify-around pt-10">
             <span className="flex flex-col items-center justify-center text-center">
-              <img src="/products/prod-1.png" alt="Products" className="h-56 md:h-auto"/>
+              <img
+                src="/products/prod-1.png"
+                alt="Products"
+                className="h-56 md:h-auto"
+              />
               <h3 className="headings text-[#7f4497] text-2xl sm:text-lg md:text-[28px] mt-5">
                 T Shape
               </h3>
             </span>
             <span className="flex flex-col items-center justify-center text-center">
-              <img src="/products/prod-2.png" alt="Products" className="h-56 md:h-auto"/>
+              <img
+                src="/products/prod-2.png"
+                alt="Products"
+                className="h-56 md:h-auto"
+              />
               <h3 className="headings text-[#7f4497] text-2xl sm:text-lg md:text-[28px] mt-5">
                 J Shape
               </h3>
             </span>
             <span className="flex flex-col items-center justify-center text-center">
-              <img src="/products/prod-3.png" alt="Products" className="h-56 md:h-auto"/>
+              <img
+                src="/products/prod-3.png"
+                alt="Products"
+                className="h-56 md:h-auto"
+              />
               <h3 className="headings text-[#7f4497] text-2xl sm:text-lg md:text-[28px] mt-5">
                 L Shape
               </h3>
@@ -296,19 +312,31 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap flex-col space-y-20 sm:space-y-0 sm:flex-row justify-around pt-24">
             <span className="flex flex-col items-center justify-center text-center">
-              <img src="/products/prod-4.png" alt="Products" className="h-56 md:h-auto"/>
+              <img
+                src="/products/prod-4.png"
+                alt="Products"
+                className="h-56 md:h-auto"
+              />
               <h3 className="headings text-[#7f4497] text-2xl sm:text-lg md:text-[28px] mt-5">
                 Plate Shape
               </h3>
             </span>
             <span className="flex flex-col items-center justify-center text-center">
-              <img src="/products/prod-5.png" alt="Products" className="h-56 md:h-auto"/>
+              <img
+                src="/products/prod-5.png"
+                alt="Products"
+                className="h-56 md:h-auto"
+              />
               <h3 className="headings text-[#7f4497] text-2xl sm:text-lg md:text-[28px] mt-5">
                 Brace Rod
               </h3>
             </span>
             <span className="flex flex-col items-center justify-center text-center">
-              <img src="/products/prod-6.png" alt="Products" className="h-56 md:h-auto"/>
+              <img
+                src="/products/prod-6.png"
+                alt="Products"
+                className="h-56 md:h-auto"
+              />
               <h3 className="headings text-[#7f4497] text-2xl sm:text-lg md:text-[28px] mt-5">
                 V Shape Rod
               </h3>
@@ -456,7 +484,7 @@ export default function Home() {
       </section>
       {/* Industries  */}
       {/* CTA  */}
-      <section className="bg-[url('/Cta-img.png')] bg-cover bg-center">
+      <section className="bg-[url('/Cta-img.png')] bg-cover bg-center hidden md:block">
         <div className="p-40 flex flex-col justify-center items-center w-full inset-0 bg-black/50">
           <h2 className="flex items-center justify-center headings text-white text-xl md:text-2xl lg:text-3xl xl:text-4xl w-full font-bold">
             We are Leaders in &nbsp;
@@ -474,11 +502,11 @@ export default function Home() {
       </section>
       {/* CTA  */}
       {/* <!-- Contact  --> */}
-      <section className="bg-[#e3be23] py-24 px-44">
+      <section className="bg-[#e3be23] py-24 px-3 sm:px-44">
         <div className="flex flex-col items-center text-center justify-center mb-10">
           <h2 className="text-[20px] text-white headings mb-6">Contact Us</h2>
           <AnimateOnScroll>
-            <h3 className="text-2xl headings text-[#7f4497] capitalize lg:text-[42px] font-semibold">
+            <h3 className="text-3xl headings text-[#7f4497] capitalize lg:text-[42px] font-semibold">
               {/* INDUSTRIES WE SERVE */}
               <span style={{ "--i": ".04s" }}>K</span>
               <span style={{ "--i": ".08s" }}>E</span>
@@ -499,8 +527,8 @@ export default function Home() {
           </AnimateOnScroll>
         </div>
         <div className="flex flex-col mx-auto overflow-hidden bg-white shadow-lg md:flex-row">
-          <div className="md:flex md:flex-col md:items-center md:justify-center md:bg-[#3f321a] w-1/2">
-            <div className="flex gap-3 mb-1">
+          <div className="md:flex md:flex-col md:items-center md:justify-center bg-[#3f321a] w-full md:w-1/2">
+            <div className="flex gap-3 mb-1 p-5">
               <div className="text-5xl text-[#ce9e51]">
                 <FaAddressBook />
               </div>
@@ -512,7 +540,7 @@ export default function Home() {
                   {" "}
                   ROYAL ANCHORS
                 </h4>
-                <p className="w-48 text-[#cccccc] mb-1 text-[14px]">
+                <p className="w-44 sm:w-48 text-[#cccccc] mb-1 text-[14px]">
                   Plot No 5 & 6, 8th Street Tass Industrial Estate Ambattur ,
                   Chennai - 98
                 </p>
@@ -524,7 +552,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-3 mt-2">
+            <div className="flex gap-3 mt-2 p-5">
               <div className="text-5xl text-[#ce9e51] xl:-ml-5">
                 <FaPhoneSquare />
               </div>
@@ -562,7 +590,7 @@ export default function Home() {
 
           <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:px-12 w-full">
             <form action="" className="px-5">
-              <div className="flex justify-evenly gap-10">
+              <div className="flex justify-evenly xl:gap-10 flex-wrap xl:flex-nowrap">
                 <div className="relative mt-8 w-full">
                   <input
                     className="appearance-none border pl-8 border-gray-300 text-[#888888] placeholder:text-gray-400/70 text-sm focus:shadow-[0_0_25px_0px_rgba(0,0,0,0.1)] transition-all ease-in-out duration-300 w-full py-[0.58rem] content font-thin focus:outline-none"
@@ -586,7 +614,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex justify-evenly gap-10">
+              <div className="flex justify-evenly xl:gap-10 flex-wrap xl:flex-nowrap ">
                 <div className="relative mt-8 w-full">
                   <input
                     className="appearance-none border pl-8 border-gray-300 text-[#888888] placeholder:text-gray-400/70 text-sm focus:shadow-[0_0_25px_0px_rgba(0,0,0,0.1)] transition-all ease-in-out duration-300 w-full py-[0.58rem] content font-thin focus:outline-none"
@@ -626,7 +654,7 @@ export default function Home() {
               <div className="mt-4">
                 <button
                   type="submit"
-                  className="inline-block border border-[#CE9E51] w-full rounded-full bg-transparent px-6 py-1 sm:w-auto text-[#e3be23] content hover:bg-[#e3be23] hover:text-white transition-all ease-in-out duration-1000"
+                  className="inline-block border border-[#CE9E51] w-full rounded-full bg-transparent px-3 sm:px-6 py-1 sm:w-auto text-[#e3be23] content hover:bg-[#e3be23] hover:text-white transition-all ease-in-out duration-1000"
                 >
                   SEND MESSAGE
                 </button>
@@ -639,8 +667,8 @@ export default function Home() {
 
       {/* footer */}
       <section className="bg-[url('/contact-bg.png')] bg-center bg-cover">
-        <div className="flex justify-evenly flex-wrap items-center bg-gray-600/20 w-full h-full py-20 px-24">
-          <div className=" ml-32">
+        <div className="flex justify-evenly flex-wrap items-center bg-gray-600/20 w-full h-full py-20 px-5 sm:px-24 space-y-10 sm:space-y-0">
+          <div className="sm:ml-32">
             <Image
               width={500}
               height={500}
@@ -648,7 +676,7 @@ export default function Home() {
               src="/logo.png"
             />
           </div>
-          <div className="w-1/2">
+          <div className="sm:w-1/2">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d497396.16226288007!2d80.160409!3d13.105045!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5263beed4919e5%3A0xb1d3879af3611e4f!2sTass%20Industrial%20Estate%2C%20Sidco%20Industrial%20Estate%2C%20Ambattur%2C%20Chennai%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sus!4v1681005982272!5m2!1sen!2sus"
               className="border-none w-full h-[20rem]"
@@ -663,7 +691,7 @@ export default function Home() {
 
       <footer class="bg-[#2e2d2d]">
         <div class="container flex flex-col items-center justify-around p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
-          <p class="text-gray-100 flex flex-col">
+          <p class="text-gray-100 flex flex-col text-center sm:text-start">
             <span className="text-xl headings text-[#d6d6d6]">
               {" "}
               © 2021 Royal Anchors. All Rights Reserved.

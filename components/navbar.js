@@ -9,23 +9,23 @@ const Navbar = () => {
   return (
     <>
       <header
-        className="absolute bg-white md:bg-black/40 xl:py-[0.7rem] z-50 w-full"
+        className="md:absolute bg-white md:bg-black/40 xl:py-[0.7rem] z-50 w-full "
         data-te-navbar-ref
       >
-        <div className="flex flex-row justify-between items-center md:justify-center md:gap-5 lg:ml-5 p-2 md:pt-10 md:px-10">
+        <div className="flex flex-row justify-between items-center md:justify-center md:gap-5 lg:ml-5 p-2 md:pt-10 md:px-10 xl:p-0">
           <div className="flex">
             <Image
-              height={500}
-              width={500}
+              height={1000}
+              width={1000}
               src="/logo.png"
-              className="w-[13rem] md:w-[7.5rem] md:h-[4.8rem] xl:w-[7.1rem] xl:h-[7.1rem]"
+              className="w-16 sm:w-32 xl:w-[7.1rem] xl:h-[7.1rem]"
             />
           </div>
           <div className="flex flex-col -translate-y-1">
             {/* Top Nav  */}
             <div className="hidden md:flex">
-              <div className="flex gap-2 xl:gap-16">
-                <ul className="flex flex-wrap gap-5 xl:gap-12 text-center items-center justify-center">
+              <div className="flex items-center text-center justify-center gap-2 xl:gap-5 2xl:gap-16 mx-auto">
+                <ul className="flex flex-wrap gap-5 xl:gap-12">
                   <li>
                     <a
                       className="text-gray-100 transition flex items-center gap-2 top-nav text-[0.8rem] hover:text-[#ECC834]"
@@ -50,7 +50,7 @@ const Navbar = () => {
                     </a>
                   </li>
 
-                  <li className="w-[21rem]">
+                  <li className="w-[21rem] lg:w-auto">
                     <a
                       className="text-gray-100 transition flex items-center gap-2 top-nav text-[0.8rem] hover:text-[#ECC834]"
                       href="#"
@@ -95,9 +95,9 @@ const Navbar = () => {
             <div className="bg-white w-full h-[0.07px] my-3 lg:mb-5 hidden md:flex"></div>
             {/* Bottom Nav  */}
             <div className="text-white">
-              <div className="">
+              <div className="flex lg:hidden ">
                 <button
-                  class="flex lg:hidden border-0 bg-transparent px-2.5 py-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0"
+                  class="border-0 bg-transparent px-2.5 py-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0"
                   type="button"
                   data-te-collapse-init
                   data-te-target="#navbarSupportedContent3"
@@ -105,26 +105,11 @@ const Navbar = () => {
                   aria-expanded="false"
                   aria-label="Toggle navigation"
                 >
-                  {/* <!-- Hamburger icon --> */}
-                  {/* <span class="w-7 text-gray-900 md:text-white">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      class="h-7 w-7"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </span> */}
-                  <GiHamburgerMenu className="text-2xl md:text-xl text-gray-900 md:text-whit"/>
+                  <GiHamburgerMenu className="text-2xl md:text-xl text-gray-900 md:text-white"/>
                 </button>
               </div>
 
-              <ul className="hidden lg:flex justify-center items-center flex-wrap xl:flex-nowrap text-center text-sm space-y-2 px-8">
+              <ul className="hidden lg:flex justify-center items-center flex-wrap text-center text-sm space-y-2 px-8">
                 <li className="">
                   <a
                     className="text-[#ECC834] bg-[#54595F] p-[1.39rem] px-8 bottom-nav capitalize text-[0.59rem] font-bold tracking-wide"
@@ -192,7 +177,7 @@ const Navbar = () => {
             {/* Bottom Nav  */}
           </div>
           {/* Search Modal  */}
-          <div className="hidden md:flex justify-center items-center text-white translate-x-0 2xl:translate-x-8">
+          <div className="hidden md:flex justify-center items-center text-white translate-x-0 xl:translate-x-8">
             <a href="">
               <FaSearch className="text-lg font-bold" />
             </a>
@@ -202,17 +187,17 @@ const Navbar = () => {
 
         {/* <!-- Collapsible navbar container --> */}
         <div
-          class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto bg-white"
+          class="hidden flex-grow basis-[100%] items-center lg:hidden bg-white"
           id="navbarSupportedContent3"
           data-te-collapse-item
         >
           <ul
-            class="list-style-none mx-auto flex flex-col pl-0 lg:flex-row text-center space-y-5 py-2"
+            class="list-style-none mx-auto flex flex-col pl-0 lg:flex-row text-center"
             data-te-navbar-nav-ref
           >
-            <li class="lg:px-2" data-te-nav-item-ref>
+            <li class="lg:px-2 bg-[#666666] py-1.5" data-te-nav-item-ref>
               <a
-                class="active lg:px-2 [&.active]:text-black/90 headings font-thin text-xl"
+                class="active lg:px-2 text-white headings font-thin text-lg"
                 aria-current="page"
                 href="#"
                 data-te-nav-link-ref
@@ -220,27 +205,58 @@ const Navbar = () => {
                 Home
               </a>
             </li>
-            <li class="lg:pr-2" data-te-nav-item-ref>
+            <li class="lg:pr-2 py-1.5" data-te-nav-item-ref>
               <a
-                class="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-xl"
+                class="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-lg"
                 href="#"
                 data-te-nav-link-ref
               >
-                Features
+                About Us
               </a>
             </li>
-            <li class="lg:pr-2" data-te-nav-item-ref>
+            <li class="lg:pr-2 py-1.5" data-te-nav-item-ref>
               <a
-                class="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-xl"
+                class="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-lg"
                 href="#"
                 data-te-nav-link-ref
               >
-                Pricing
+                Services
               </a>
             </li>
-            <li class="lg:pr-2" data-te-nav-link-ref>
-              <a class="text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400">
-                Disabled
+            <li class="lg:pr-2 py-1.5" data-te-nav-item-ref>
+              <a
+                class="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-lg"
+                href="#"
+                data-te-nav-link-ref
+              >
+                Our Products
+              </a>
+            </li>
+            <li class="lg:pr-2 py-1.5" data-te-nav-item-ref>
+              <a
+                class="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-lg"
+                href="#"
+                data-te-nav-link-ref
+              >
+                Technical Specification
+              </a>
+            </li>
+            <li class="lg:pr-2 py-1.5" data-te-nav-item-ref>
+              <a
+                class="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-lg"
+                href="#"
+                data-te-nav-link-ref
+              >
+                Industries We Serve
+              </a>
+            </li>
+            <li class="lg:pr-2 py-1.5" data-te-nav-item-ref>
+              <a
+                class="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-lg"
+                href="#"
+                data-te-nav-link-ref
+              >
+                Manufacturing Capabilities
               </a>
             </li>
           </ul>
