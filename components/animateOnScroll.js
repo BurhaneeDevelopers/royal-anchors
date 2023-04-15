@@ -2,6 +2,7 @@ import React from "react";
 import { useRef, useEffect } from "react";
 
 const AnimateOnScroll = ({children, threshold = 0.5}) => {
+  // It triggers the animation when user scrolls to a particular components ex: Products section 
   const animateRef = useRef(null);
 
   useEffect(() => {

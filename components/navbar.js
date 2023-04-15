@@ -12,12 +12,14 @@ const Navbar = () => {
         className="md:absolute bg-white md:bg-black/40 xl:py-[0.7rem] z-50 w-full "
         data-te-navbar-ref
       >
-        <div className="flex flex-row justify-between items-center md:justify-center md:gap-5 lg:ml-5 p-2 md:pt-10 md:px-10 xl:p-0">
+        {/* Whole Header  */}
+        <div className="flex flex-row justify-between items-center md:justify-center md:gap-5 lg:ml-5  p-2 md:pt-10 md:px-10 xl:p-1 xl:px-3">
           <div className="flex">
             <Image
               height={1000}
               width={1000}
               src="/logo.png"
+              alt="Royal Anchors"
               className="w-16 sm:w-32 xl:w-[7.1rem] xl:h-[7.1rem]"
             />
           </div>
@@ -97,7 +99,7 @@ const Navbar = () => {
             <div className="text-white">
               <div className="flex lg:hidden ">
                 <button
-                  class="border-0 bg-transparent px-2.5 py-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0"
+                  className="border-0 bg-transparent px-2.5 py-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0"
                   type="button"
                   data-te-collapse-init
                   data-te-target="#navbarSupportedContent3"
@@ -177,7 +179,7 @@ const Navbar = () => {
             {/* Bottom Nav  */}
           </div>
           {/* Search Modal  */}
-          <div className="hidden md:flex justify-center items-center text-white translate-x-0 xl:translate-x-8">
+          <div className="hidden md:flex justify-center items-center text-white translate-x-0 2xl:translate-x-8">
             <a href="">
               <FaSearch className="text-lg font-bold" />
             </a>
@@ -187,17 +189,17 @@ const Navbar = () => {
 
         {/* <!-- Collapsible navbar container --> */}
         <div
-          class="hidden flex-grow basis-[100%] items-center lg:hidden bg-white"
+          className="hidden flex-grow basis-[100%] items-center lg:hidden bg-white"
           id="navbarSupportedContent3"
           data-te-collapse-item
         >
           <ul
-            class="list-style-none mx-auto flex flex-col pl-0 lg:flex-row text-center"
+            className="list-style-none mx-auto flex flex-col pl-0 lg:flex-row text-center"
             data-te-navbar-nav-ref
           >
-            <li class="lg:px-2 bg-[#666666] py-1.5" data-te-nav-item-ref>
+            <li className="lg:px-2 bg-[#666666] py-1.5" data-te-nav-item-ref>
               <a
-                class="active lg:px-2 text-white headings font-thin text-lg"
+                className="active lg:px-2 text-white headings font-thin text-lg"
                 aria-current="page"
                 href="#"
                 data-te-nav-link-ref
@@ -205,54 +207,54 @@ const Navbar = () => {
                 Home
               </a>
             </li>
-            <li class="lg:pr-2 py-1.5" data-te-nav-item-ref>
+            <li className="lg:pr-2 py-1.5" data-te-nav-item-ref>
               <a
-                class="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-lg"
+                className="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-lg"
                 href="#"
                 data-te-nav-link-ref
               >
                 About Us
               </a>
             </li>
-            <li class="lg:pr-2 py-1.5" data-te-nav-item-ref>
+            <li className="lg:pr-2 py-1.5" data-te-nav-item-ref>
               <a
-                class="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-lg"
+                className="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-lg"
                 href="#"
                 data-te-nav-link-ref
               >
                 Services
               </a>
             </li>
-            <li class="lg:pr-2 py-1.5" data-te-nav-item-ref>
+            <li className="lg:pr-2 py-1.5" data-te-nav-item-ref>
               <a
-                class="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-lg"
+                className="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-lg"
                 href="#"
                 data-te-nav-link-ref
               >
                 Our Products
               </a>
             </li>
-            <li class="lg:pr-2 py-1.5" data-te-nav-item-ref>
+            <li className="lg:pr-2 py-1.5" data-te-nav-item-ref>
               <a
-                class="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-lg"
+                className="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-lg"
                 href="#"
                 data-te-nav-link-ref
               >
                 Technical Specification
               </a>
             </li>
-            <li class="lg:pr-2 py-1.5" data-te-nav-item-ref>
+            <li className="lg:pr-2 py-1.5" data-te-nav-item-ref>
               <a
-                class="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-lg"
+                className="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-lg"
                 href="#"
                 data-te-nav-link-ref
               >
                 Industries We Serve
               </a>
             </li>
-            <li class="lg:pr-2 py-1.5" data-te-nav-item-ref>
+            <li className="lg:pr-2 py-1.5" data-te-nav-item-ref>
               <a
-                class="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-lg"
+                className="p-0 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:px-2 [&.active]:text-black/90 headings font-[200] text-lg"
                 href="#"
                 data-te-nav-link-ref
               >

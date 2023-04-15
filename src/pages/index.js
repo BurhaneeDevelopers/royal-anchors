@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+// Icons
 import {
   BsFillArrowRightCircleFill,
   BsPerson,
@@ -17,25 +18,73 @@ import {
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
-import { useEffect } from "react";
-import AnimateOnScroll from "../../components/animateOnScroll";
+
+import { useEffect, useRef } from "react";
+
+// Libraries
+import Typed from "typed.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+// Components
+import AnimateOnScroll from "../../components/animateOnScroll";
+
 export default function Home() {
+  // For animation
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
+
+  // For Typewriter animation
+  const typedRef = useRef(null);
+
+  useEffect(() => {
+    const typedElement = typedRef.current;
+
+    if (typedElement) {
+      const typed = new Typed(typedElement, {
+        strings: typedElement.getAttribute("data-typed-items").split(","),
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 2000,
+      });
+
+      return () => {
+        typed.destroy();
+      };
+    }
+  }, []);
+
   return (
     <>
       <Head>
         <title>Home - Royal Anchors</title>
-        <meta name="description" content="Royal Anchor Clone" />
+        <meta
+          name="description"
+          content="Royal Anchors provides anchor bolts and construction fasteners direct to end-users including contractors, fabricators, erectors, government agencies, original equipment manufacturers, and other construction-related companies"
+        />
+        <meta
+          name="keywords"
+          content="Fasteners in Chennai,Screws, Bolts, Nuts, Washers, Anchors, Rivets, Threaded Rods Threaded rods, Clamps, Fastener supplier, Industrial fasteners, Construction fasteners, Automotive fasteners, Stainless steel fasteners, Galvanized fasteners, Hardware store, Online fastener store, Buy fasteners online, Fastener distributor, Fastener manufacturer."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Home - Royal Anchors" />
+        <meta
+          property="og:description"
+          content="Royal Anchors provides anchor bolts and construction fasteners direct to end-users including contractors, fabricators, erectors, government agencies, original equipment manufacturers, and other construction-related companies"
+        />
+        <meta
+          property="og:image"
+          content="https://www.royalanchors.com/public/logo.png"
+        />
+        <meta name="author" content="Royal Anchors" />
+        <link rel="canonical" href="https://www.royalanchors.com/"></link>
         <link rel="icon" href="/logo.png" />
       </Head>
 
+      {/* HERO SECTION  */}
       <section className="w-full">
         <div
           id="carouselDarkVariant"
@@ -60,10 +109,9 @@ export default function Home() {
                   className="block h-screen w-full bg-[url('/banners/banner-img-1.jpg')] bg-no-repeat bg-cover carousel-image"
                   alt=""
                 ></div>
-                {/* <div className="bg-black/40 absolute inset-0 slide-down"></div> */}
                 <div className="absolute py-4 text-center text-black md:flex flex-col justify-center items-center bg-black/40 inset-0 slide-down">
                   <span className="relative top-[37vh] 2xs:top-[25vh] md:top-0">
-                    <h5 className="text-[30px] xxs:text-[35px] sm:text-[45px] lg:text-[50px] xl:text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-rise-animation lg:mt-20 xl:mt-0">
+                    <h1 className="text-[30px] xxs:text-[35px] sm:text-[45px] lg:text-[50px] xl:text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-rise-animation lg:mt-20 xl:mt-0">
                       <span style={{ "--i": ".01s" }}>W</span>
                       <span style={{ "--i": ".02s" }} className="mr-5">
                         e
@@ -79,8 +127,8 @@ export default function Home() {
                       <span style={{ "--i": "1.1s" }}>u</span>
                       <span style={{ "--i": "1.2s" }}>r</span>
                       <span style={{ "--i": "1.3s" }}>e</span>
-                    </h5>
-                    <h5 className="text-[30px] xxs:text-[35px] sm:text-[45px] lg:text-[50px] xl:text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-shadow text-rise-animation">
+                    </h1>
+                    <h1 className="text-[30px] xxs:text-[35px] sm:text-[45px] lg:text-[50px] xl:text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-shadow text-rise-animation">
                       {/* Locally */}
                       <span style={{ "--i": "1.4s" }}>L</span>
                       <span style={{ "--i": "1.5s" }}>o</span>
@@ -89,8 +137,8 @@ export default function Home() {
                       <span style={{ "--i": "1.8s" }}>l</span>
                       <span style={{ "--i": "1.9s" }}>l</span>
                       <span style={{ "--i": "2s" }}>y</span>
-                    </h5>
-                    <h5 className="text-[30px] xxs:text-[35px] sm:text-[45px] lg:text-[50px] xl:text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-rise-animation">
+                    </h1>
+                    <h1 className="text-[30px] xxs:text-[35px] sm:text-[45px] lg:text-[50px] xl:text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-rise-animation">
                       <span style={{ "--i": "2.1s" }}>S</span>
                       <span style={{ "--i": "2.2s" }}>e</span>
                       <span style={{ "--i": "2.3s" }}>l</span>
@@ -105,7 +153,7 @@ export default function Home() {
                         <span style={{ "--i": "3.1s" }}>l</span>
                         <span style={{ "--i": "3.2s" }}>y</span>
                       </span>
-                    </h5>
+                    </h1>
 
                     <div className="text-rise-animation">
                       <span style={{ "--i": "3.4s" }}>
@@ -132,10 +180,9 @@ export default function Home() {
                   className="block h-screen w-screen bg-[url('/banners/banner-img-2.jpg')] bg-no-repeat bg-cover carousel-image"
                   alt=""
                 ></div>
-                {/* <div className="bg-black/40 z-10 absolute inset-0 slide-down"></div> */}
                 <div className="absolute py-4 text-center text-black md:flex flex-col justify-center items-center bg-black/40 inset-0 slide-down">
                   <span className="relative top-[37vh] 2xs:top-[25vh] md:top-0">
-                    <h5 className="text-[30px] xxs:text-[35px] sm:text-[45px] lg:text-[50px] xl:text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-rise-animation lg:mt-20 xl:mt-0">
+                    <h1 className="text-[30px] xxs:text-[35px] sm:text-[45px] lg:text-[50px] xl:text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-rise-animation lg:mt-20 xl:mt-0">
                       <span style={{ "--i": ".01s" }}>W</span>
                       <span style={{ "--i": ".02s" }} className="mr-5">
                         e
@@ -151,8 +198,8 @@ export default function Home() {
                       <span style={{ "--i": "1.1s" }}>u</span>
                       <span style={{ "--i": "1.2s" }}>r</span>
                       <span style={{ "--i": "1.3s" }}>e</span>
-                    </h5>
-                    <h5 className="text-[30px] xxs:text-[35px] sm:text-[45px] lg:text-[50px] xl:text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-shadow text-rise-animation">
+                    </h1>
+                    <h1 className="text-[30px] xxs:text-[35px] sm:text-[45px] lg:text-[50px] xl:text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-shadow text-rise-animation">
                       {/* Locally */}
                       <span style={{ "--i": "1.4s" }}>L</span>
                       <span style={{ "--i": "1.5s" }}>o</span>
@@ -161,8 +208,8 @@ export default function Home() {
                       <span style={{ "--i": "1.8s" }}>l</span>
                       <span style={{ "--i": "1.9s" }}>l</span>
                       <span style={{ "--i": "2s" }}>y</span>
-                    </h5>
-                    <h5 className="text-[30px] xxs:text-[35px] sm:text-[45px] lg:text-[50px] xl:text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-rise-animation">
+                    </h1>
+                    <h1 className="text-[30px] xxs:text-[35px] sm:text-[45px] lg:text-[50px] xl:text-[65px] bounce-up text-white hero-text tracking-[4px] leading-snug text-rise-animation">
                       <span style={{ "--i": "2.1s" }}>S</span>
                       <span style={{ "--i": "2.2s" }}>e</span>
                       <span style={{ "--i": "2.3s" }}>l</span>
@@ -177,7 +224,7 @@ export default function Home() {
                         <span style={{ "--i": "3.1s" }}>l</span>
                         <span style={{ "--i": "3.2s" }}>y</span>
                       </span>
-                    </h5>
+                    </h1>
 
                     <div className="text-rise-animation">
                       <span style={{ "--i": "3.4s" }}>
@@ -212,7 +259,8 @@ export default function Home() {
           </button>
         </div>
       </section>
-      {/* About  */}
+
+      {/* ABOUT SECTION  */}
       <section className="bg-[url('/about-bg-img.jpg')] bg-right bg-cover bg-no-repeat">
         <div className="flex justify-around items-center flex-wrap bg-white/90 py-5 md:p-0">
           <div className="w-1/2">
@@ -235,17 +283,19 @@ export default function Home() {
             <Image
               width={500}
               height={500}
+              alt="About Royal Anchors"
               src="/about-img.png"
               className="md:w-[300px] md:h-[320px] lg:w-[350px] lg:h-[380px]"
             />
           </div>
         </div>
       </section>
-      {/* About  */}
+
+      {/* PRODUCT SECTION  */}
       <section className="bg-gray-100 p-10 xs:p-20">
         <div className="flex flex-col lg:flex-row justify-around items-center space-y-5 lg:space-y-0">
           <AnimateOnScroll>
-            <h3 className="text-[#7f4497] text-xl xs:text-2xl 2xs:text-[35px]  font-semibold headings">
+            <h2 className="text-[#7f4497] text-xl xs:text-2xl 2xs:text-[35px]  font-semibold headings">
               <span style={{ "--i": ".04s" }}>O</span>
               <span style={{ "--i": ".08s" }}>u</span>
               <span style={{ "--i": ".12s" }} className="mr-3">
@@ -259,7 +309,7 @@ export default function Home() {
               <span style={{ "--i": ".36s" }}>c</span>
               <span style={{ "--i": ".4s" }}>t</span>
               <span style={{ "--i": ".44s" }}>s</span>
-            </h3>
+            </h2>
           </AnimateOnScroll>
           <div className="max-w-sm xl:max-w-lg">
             <p className="content text-[#666666] xl:text-lg lg:text-[1rem] text-center lg:text-">
@@ -345,13 +395,14 @@ export default function Home() {
         </div>
         {/* Products */}
       </section>
-      {/* Industries  */}
+
+      {/* INDUSTRIES SECTION  */}
       <section className="bg-[#182431] p-10 xs:p-20">
         <div className="flex flex-col sm:flex-row justify-around items-center space-y-5 sm:space-y-0">
           <div className="lg:-ml-10">
             <AnimateOnScroll>
-              <h3 className="text-white text-xl sm:text-[42px] font-semibold headings">
-                {/* INDUSTRIES WE SERVE */}
+              <h2 className="text-white text-xl sm:text-[42px] font-semibold headings">
+                {/* this "style" basically says the letter to bounce up after given period of millisecond so it gives a feel of smooth animation  */}
                 <span style={{ "--i": ".04s" }}>I</span>
                 <span style={{ "--i": ".08s" }}>N</span>
                 <span style={{ "--i": ".12s" }}>D</span>
@@ -373,7 +424,7 @@ export default function Home() {
                 <span style={{ "--i": ".60s" }}>R</span>
                 <span style={{ "--i": ".64s" }}>V</span>
                 <span style={{ "--i": ".68s" }}>E</span>
-              </h3>
+              </h2>
             </AnimateOnScroll>
           </div>
           <div className="">
@@ -383,7 +434,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Products */}
+        {/* Cards */}
         <div className="flex flex-col pt-10">
           <div className="flex justify-center pt-10 gap-5 flex-wrap">
             <span className="flex flex-col items-center justify-center text-center">
@@ -392,11 +443,11 @@ export default function Home() {
                 alt="Products"
                 className="h-[15rem] w-[18rem] 2xs:h-[25rem] 2xs:w-[23rem]"
               />
-              <span className="w-48 h-32 2xs:w-64 2xs:h-48 bg-white relative bottom-[10%]">
-                <h3 className="font-bold text-black text-lg 2xs:text-[22px] pt-5 headings">
+              <span className="w-36 h-32 2xs:w-64 2xs:h-48 bg-white relative bottom-[10%]">
+                <h3 className="font-bold text-black text-sm 2xs:text-[22px] pt-5 headings">
                   Pre Engineered Buildings System
                 </h3>{" "}
-                <span className="flex justify-center relative top-[20%] text-[#ce9e51]">
+                <span className="flex justify-center relative 2xs:top-[20%] text-[#ce9e51]">
                   ---------
                 </span>
               </span>
@@ -407,11 +458,11 @@ export default function Home() {
                 alt="Products"
                 className="h-[15rem] w-[18rem] 2xs:h-[25rem] 2xs:w-[23rem]"
               />
-              <span className="w-48 h-32 2xs:w-64 2xs:h-48 bg-white relative bottom-[10%]">
-                <h3 className="font-bold text-black text-lg 2xs:text-[22px] pt-5 headings">
+              <span className="w-36 h-32 2xs:w-64 2xs:h-48 bg-white relative bottom-[10%]">
+                <h3 className="font-bold text-black text-sm 2xs:text-[22px] pt-5 headings">
                   Precast Concrete Structures
                 </h3>{" "}
-                <span className="flex justify-center relative top-[20%] text-[#ce9e51]">
+                <span className="flex justify-center relative 2xs:top-[20%] text-[#ce9e51]">
                   ---------
                 </span>
               </span>
@@ -422,11 +473,11 @@ export default function Home() {
                 alt="Products"
                 className="h-[15rem] w-[18rem] 2xs:h-[25rem] 2xs:w-[23rem]"
               />
-              <span className="w-48 h-32 2xs:w-64 2xs:h-48 bg-white relative bottom-[10%]">
-                <h3 className="font-bold text-black text-lg 2xs:text-[22px] pt-5 headings px-2">
+              <span className="w-36 h-32 2xs:w-64 2xs:h-48 bg-white relative bottom-[10%]">
+                <h3 className="font-bold text-black text-sm 2xs:text-[22px] pt-5 headings px-2">
                   Street & Domestic Lamp Post Foundation Bolts
                 </h3>{" "}
-                <span className="flex justify-center relative top-[20%] text-[#ce9e51]">
+                <span className="flex justify-center relative 2xs:top-[20%] text-[#ce9e51]">
                   ---------
                 </span>
               </span>
@@ -439,11 +490,11 @@ export default function Home() {
                 alt="Products"
                 className="h-[15rem] w-[18rem] 2xs:h-[25rem] 2xs:w-[23rem]"
               />
-              <span className="w-48 h-32 2xs:w-64 2xs:h-48 bg-white relative bottom-[10%]">
-                <h3 className="font-bold text-black text-lg 2xs:text-[22px] pt-5 headings">
+              <span className="w-36 h-32 2xs:w-64 2xs:h-48 bg-white relative bottom-[10%]">
+                <h3 className="font-bold text-black px-1 2xs:px-0 text-sm 2xs:text-[22px] pt-5 headings">
                   Beam Crash Barrier Foundation Bolts
                 </h3>{" "}
-                <span className="flex justify-center relative top-[20%] text-[#ce9e51]">
+                <span className="flex justify-center relative 2xs:top-[20%] text-[#ce9e51]">
                   ---------
                 </span>
               </span>
@@ -454,11 +505,11 @@ export default function Home() {
                 alt="Products"
                 className="h-[15rem] w-[18rem] 2xs:h-[25rem] 2xs:w-[23rem]"
               />
-              <span className="w-48 h-32 2xs:w-64 2xs:h-48 bg-white relative bottom-[10%]">
-                <h3 className="font-bold text-black text-lg 2xs:text-[22px] pt-5 headings">
+              <span className="w-36 h-32 2xs:w-64 2xs:h-48 bg-white relative bottom-[10%]">
+                <h3 className="font-bold text-black text-sm 2xs:text-[22px] pt-5 headings">
                   Industrial Heavy Duty Fan
                 </h3>{" "}
-                <span className="flex justify-center relative top-[20%] text-[#ce9e51]">
+                <span className="flex justify-center relative 2xs:top-[20%] text-[#ce9e51]">
                   ---------
                 </span>
               </span>
@@ -469,40 +520,39 @@ export default function Home() {
                 alt="Products"
                 className="h-[15rem] w-[18rem] 2xs:h-[25rem] 2xs:w-[23rem]"
               />
-              <span className="w-48 h-32 2xs:w-64 2xs:h-48 bg-white relative bottom-[10%]">
-                <h3 className="font-bold text-black text-lg 2xs:text-[22px] pt-5 headings px-2">
+              <span className="w-36 h-32 2xs:w-64 2xs:h-48 bg-white relative bottom-[10%]">
+                <h3 className="font-bold text-black text-sm 2xs:text-[22px] pt-5 headings px-2">
                   Heavy Metal Fabrication
                 </h3>{" "}
-                <span className="flex justify-center relative top-[20%] text-[#ce9e51]">
+                <span className="flex justify-center relative 2xs:top-[20%] text-[#ce9e51]">
                   ---------
                 </span>
               </span>
             </span>
           </div>
         </div>
-        {/* Products */}
+        {/* Cards */}
       </section>
-      {/* Industries  */}
-      {/* CTA  */}
+      
+      {/* CTA SECTION  */}
       <section className="bg-[url('/Cta-img.png')] bg-cover bg-center hidden md:block">
-        <div className="p-40 flex flex-col justify-center items-center w-full inset-0 bg-black/50">
+        <div className="p-36 flex flex-col justify-center items-center w-full inset-0 bg-black/50">
           <h2 className="flex items-center justify-center headings text-white text-xl md:text-2xl lg:text-3xl xl:text-4xl w-full font-bold">
             We are Leaders in &nbsp;
-            <p
-              className="text-[#ecc834] font-bold typewriter w-1/2"
-              id="typewriter"
-            >
-              INDUSTRIAL MARKETS
-            </p>
+            <span
+              ref={typedRef}
+              className="typed text-[#ecc834] font-bold"
+              data-typed-items="INDUSTRIAL MARKET,"
+            ></span>
           </h2>
           <p className="text-2xl text-white pt-5 headings">
             Watch Our Intro Video
           </p>
         </div>
       </section>
-      {/* CTA  */}
-      {/* <!-- Contact  --> */}
-      <section className="bg-[#e3be23] py-24 px-3 sm:px-44">
+      
+      {/* <!-- CONTACT SECTION  --> */}
+      <section className="bg-[#e3be23] py-24 px-3 sm:px-20 lg:px-44">
         <div className="flex flex-col items-center text-center justify-center mb-10">
           <h2 className="text-[20px] text-white headings mb-6">Contact Us</h2>
           <AnimateOnScroll>
@@ -527,8 +577,8 @@ export default function Home() {
           </AnimateOnScroll>
         </div>
         <div className="flex flex-col mx-auto overflow-hidden bg-white shadow-lg md:flex-row">
-          <div className="md:flex md:flex-col md:items-center md:justify-center bg-[#3f321a] w-full md:w-1/2">
-            <div className="flex gap-3 mb-1 p-5">
+          <div className="flex flex-col items-center justify-center bg-[#3f321a] w-full md:w-1/2">
+            <div className="flex gap-3 mb-1 p-5 ">
               <div className="text-5xl text-[#ce9e51]">
                 <FaAddressBook />
               </div>
@@ -552,7 +602,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-3 mt-2 p-5">
+            <div className="flex gap-3 mt-2 p-5 ">
               <div className="text-5xl text-[#ce9e51] xl:-ml-5">
                 <FaPhoneSquare />
               </div>
@@ -594,6 +644,7 @@ export default function Home() {
                 <div className="relative mt-8 w-full">
                   <input
                     className="appearance-none border pl-8 border-gray-300 text-[#888888] placeholder:text-gray-400/70 text-sm focus:shadow-[0_0_25px_0px_rgba(0,0,0,0.1)] transition-all ease-in-out duration-300 w-full py-[0.58rem] content font-thin focus:outline-none"
+                    required
                     type="text"
                     placeholder="Your Name..."
                   />
@@ -605,6 +656,7 @@ export default function Home() {
                 <div className="relative mt-8 w-full">
                   <input
                     className="appearance-none border pl-8 border-gray-300 text-[#888888] placeholder:text-gray-400/70 text-sm focus:shadow-[0_0_25px_0px_rgba(0,0,0,0.1)] transition-all ease-in-out duration-300 w-full py-[0.58rem] content font-thin focus:outline-none"
+                    required
                     type="text"
                     placeholder="Cell Phone..."
                   />
@@ -618,6 +670,7 @@ export default function Home() {
                 <div className="relative mt-8 w-full">
                   <input
                     className="appearance-none border pl-8 border-gray-300 text-[#888888] placeholder:text-gray-400/70 text-sm focus:shadow-[0_0_25px_0px_rgba(0,0,0,0.1)] transition-all ease-in-out duration-300 w-full py-[0.58rem] content font-thin focus:outline-none"
+                    required
                     type="email"
                     placeholder="Email Address..."
                   />
@@ -629,6 +682,7 @@ export default function Home() {
                 <div className="relative mt-8 w-full">
                   <input
                     className="appearance-none border pl-8 border-gray-300 text-[#888888] placeholder:text-gray-400/70 text-sm focus:shadow-[0_0_25px_0px_rgba(0,0,0,0.1)] transition-all ease-in-out duration-300 w-full py-[0.58rem] content font-thin focus:outline-none"
+                    required
                     type="text"
                     placeholder="Subject..."
                   />
@@ -640,7 +694,6 @@ export default function Home() {
 
               <div className="relative mt-5">
                 <textarea
-                  // className="w-full text-[#888888] border border-gray-300 p-3 text-sm focus:outline-none focus:shadow-[0_0_25px_0px_rgba(0,0,0,0.1)]"
                   className="appearance-none border py-[0.65rem] pl-8 border-gray-300 text-[#888888] placeholder:text-gray-400/70 text-sm focus:shadow-[0_0_25px_0px_rgba(0,0,0,0.1)] transition-all ease-in-out duration-300 w-full focus:outline-none"
                   placeholder="Message"
                   rows="8"
@@ -663,15 +716,16 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <!-- Contact  --> */}
+      
 
-      {/* footer */}
+      {/* Footer Contact Map SECTION*/}
       <section className="bg-[url('/contact-bg.png')] bg-center bg-cover">
         <div className="flex justify-evenly flex-wrap items-center bg-gray-600/20 w-full h-full py-20 px-5 sm:px-24 space-y-10 sm:space-y-0">
           <div className="sm:ml-32">
             <Image
               width={500}
               height={500}
+              alt="Royal Anchors"
               className="w-[20rem] hover:scale-110 transition-all ease-in-out duration-200"
               src="/logo.png"
             />
@@ -687,53 +741,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* footer */}
-
-      <footer class="bg-[#2e2d2d]">
-        <div class="container flex flex-col items-center justify-around p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
-          <p class="text-gray-100 flex flex-col text-center sm:text-start">
-            <span className="text-xl headings text-[#d6d6d6]">
-              {" "}
-              © 2021 Royal Anchors. All Rights Reserved.
-            </span>{" "}
-            <span className="headings text-[#d6d6d6]">Powered By Studio53</span>
-          </p>
-
-          <div class="flex gap-8">
-            <a
-              href="#"
-              class=" text-gray-600 transition-colors duration-300 hover:text-blue-500"
-              aria-label="Reddit"
-            >
-              <AiOutlineTwitter className="text-white text-lg" />
-            </a>
-
-            <a
-              href="#"
-              class=" text-gray-600 transition-colors duration-300 hover:text-blue-500"
-              aria-label="Facebook"
-            >
-              <FaFacebookF className="text-white text-lg" />
-            </a>
-
-            <a
-              href="#"
-              class=" text-gray-600 transition-colors duration-300 hover:text-blue-500"
-              aria-label="Github"
-            >
-              <FaLinkedinIn className="text-white text-lg" />
-            </a>
-
-            <a
-              href="#"
-              class=" text-gray-600 transition-colors duration-300 hover:text-blue-500"
-              aria-label="Github"
-            >
-              <FaInstagram className="text-white text-lg" />
-            </a>
-          </div>
-        </div>
-      </footer>
     </>
   );
 }

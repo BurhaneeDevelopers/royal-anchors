@@ -1,9 +1,14 @@
 import "@/styles/globals.css";
 import { useEffect } from "react";
-import AOS from "aos";
+
+// Components 
 import Navbar from "../../components/navbar";
+import Footer from "../../components/Footer";
 import BackToTop from "../../components/backToTop";
 import Action from "../../components/action";
+
+// Libraries 
+import AOS from "aos";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -24,6 +29,7 @@ export default function App({ Component, pageProps }) {
       <BackToTop />
       <Action />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }

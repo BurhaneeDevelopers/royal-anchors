@@ -1,7 +1,9 @@
+/* Default 3 errors wont affect site's perfomance */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Colour when some text is selected */
 ::selection {
   background-color: #4e4e4e;
   color: #fff;
@@ -111,6 +113,7 @@
   }
 }
 
+/* Font Styles  */
 .top-nav {
   font-family: "Montserrat", sans-serif;
 }
@@ -128,6 +131,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-.btn-txt{
+.btn-txt {
   font-family: "Roboto", sans-serif;
 }

@@ -16,7 +16,7 @@ const BackToTop = () => {
   return (
     <>
       <div
-        className="fixed  bg-[#ce9e51] p-4 right-10 bottom-[800px] z-50 rounded-full scrollTop invisible opacity-0 transition-all duration-500 cursor-pointer animate-pulse"
+        className="fixed  bg-[#ce9e51] p-4 right-10 bottom-[800px] z-50 rounded-full scrollTop invisible opacity-0 transition-all duration-500 cursor-pointer drop-shadow-xl"
         onClick={handleClick}
       >
         <AiOutlineArrowUp className="text-white text-xl" />
